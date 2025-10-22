@@ -1,0 +1,5 @@
+Enter how many numbers: 6
+Enter 6 numbers: 15 3 20 8 12 5
+
+Before Sorting: 15 3 20 8 12 5 
+After Selection Sort (Descending): 20 15 12 8 5 3 
