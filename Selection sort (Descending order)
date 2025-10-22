@@ -1,0 +1,52 @@
+#include <stdio.h>
+
+void selectionSort(int arr[], int n) {
+int round, pos, maxPos, temp;
+
+for (round = 0; round < n - 1; round++) {
+maxPos = round;
+
+
+for (pos = round + 1; pos < n; pos++) {
+if (arr[pos] > arr[maxPos]) {
+maxPos = pos;
+}
+}
+
+
+temp = arr[round];
+arr[round] = arr[maxPos];
+arr[maxPos] = temp;
+}
+}
+
+void printArr(int arr[], int n) {
+for (int i = 0; i < n; i++) {
+printf("%d ", arr[i]);
+}
+printf("\n");
+}
+
+int main() {
+int n;
+
+printf("Enter how many numbers: ");
+scanf("%d", &n);
+
+int arr[n];
+printf("Enter %d numbers: ", n);
+for (int i = 0; i < n; i++) {
+scanf("%d", &arr[i]);
+}
+
+printf("\nBefore Sorting: ");
+printArr(arr, n);
+
+selectionSort(arr, n);
+
+printf("After Selection Sort (Descending): ");
+printArr(arr, n);
+
+return 0;
+}
+
